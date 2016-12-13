@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_camera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lebartodev.mercurycamera.CameraActivity"
+    android:background="@android:color/black">
+
+    <SurfaceView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <FrameLayout
+        android:id="@+id/change_camera_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible">
+
+        <com.lebartodev.mercurycamera.RotatingImageView
+            android:id="@+id/change_camera"
+            android:layout_width="30dp"
+
+            android:layout_height="30dp"
+            android:background="@android:drawable/stat_notify_sync_noanim" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/fullscreen_content_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/darkToolbarColor"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <FrameLayout
+            android:id="@+id/check_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <com.lebartodev.mercurycamera.RotatingImageView
+                android:id="@+id/check_button"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_check_mark"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/capture_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <com.lebartodev.mercurycamera.RotatingImageView
+                android:id="@+id/capture_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+
+                android:src="@drawable/ic_capture" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/change_flash_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp">
+
+            <com.lebartodev.mercurycamera.RotatingImageView
+                android:id="@+id/change_flash_state"
+                android:layout_width="50dp"
+
+
+                android:layout_height="50dp"
+                android:src="@drawable/ic_flash" />
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/light_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:visibility="invisible" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/front_flash_layout"
+        android:background="@android:color/holo_orange_light"
+        android:alpha="0.4"
+        android:layout_above="@+id/fullscreen_content_controls"
+        android:visibility="invisible">
+
+    </FrameLayout>
+
+</RelativeLayout>
